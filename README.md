@@ -1,6 +1,6 @@
 # react-routing-conundrum
 
-This app demonstrates an issue with a functional component with inputs where changes to the input are meant to 
+This app demonstrates an issue with routing with a component with inputs where changes to the input are meant to 
 update the URL search query.  The search query is meant to be the source of truth for the state of the app, so someone
 could theoretically deep link to a given state.  
 
@@ -16,5 +16,7 @@ The mechanism I worked out to keep the focus involved two things:
 1. whenever the state changes, keep track of the id of the item with focus
 2. after re-render, use the `useEffect` hook to set the focus again on the new element with the same id.  
 
-Is there a better way to deal with this?  Would I still have this problem if I used a `React.Component` class instead 
-of a functional component?  
+I wondered if maybe the problem was only because I had chosen to build it as a functional component so I created the 
+same component as a `React.Component`, but it had the same problem.  
+
+Is there a better way to deal with this?  
