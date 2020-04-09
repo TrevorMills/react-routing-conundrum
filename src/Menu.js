@@ -18,6 +18,9 @@ const Menu = props => {
                     {( window.location.pathname === route.path ) ? route.label : <Link to={route.path + props.location.search}>{route.label}</Link>}
                 </span>;
         })}
+        <span style={{padding:'1em'}}>
+            <a href="https://github.com/TrevorMills/react-routing-conundrum" target="_blank" rel="noopener noreferrer">Source</a>
+        </span>
     </div>
 
 };
